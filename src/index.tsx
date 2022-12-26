@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import ReactPageScroller from 'react-page-scroller';
+
+import { Home } from './components/Home';
+import { Info } from './components/Info';
+import { Application } from './components/Application';
+import { Technology } from './components/Technology';
+import { Contacts } from './components/Contacts';
+
 import './index.scss';
-import { App } from './components/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -9,6 +16,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <ReactPageScroller>
+      <Home />
+      <Info />
+      <Application />
+      <Technology />
+      <Contacts />
+    </ReactPageScroller>
   </React.StrictMode>
 );

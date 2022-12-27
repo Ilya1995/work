@@ -3,13 +3,15 @@ import { Animate } from 'react-simple-animate';
 import { useVisible } from '../hooks/useVisible';
 
 export const Info = () => {
-  const [targetRef, visible] = useVisible((vi: number) => vi > 0.1);
-  console.log(visible);
+  const [ref, inView] = useVisible({
+    threshold: 1,
+    triggerOnce: true,
+  });
 
   return (
-    <div className="page info-page" ref={targetRef}>
+    <div className="page info-page" ref={ref}>
       <Animate
-        play={visible}
+        play={inView}
         start={{
           transform: 'translateX(-100px)',
         }}

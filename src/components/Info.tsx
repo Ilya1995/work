@@ -1,17 +1,15 @@
 import { Animate } from 'react-simple-animate';
 
 import { useVisible } from '../hooks/useVisible';
+import { DEFAULT_OBSERVER_OPTIONS } from '../constants';
 import { Header } from './Header';
 
 export const Info = () => {
-  const [ref, inView] = useVisible({
-    threshold: 0.8,
-    triggerOnce: true,
-  });
+  const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);
 
   return (
     <div className="page info-page" ref={ref}>
-      <Header inView={inView} />
+      <Header inView={inView} title="СВЯЗЬ ПОБЕДА" />
       <Animate
         play={inView}
         start={{

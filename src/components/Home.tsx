@@ -1,12 +1,10 @@
 import { Animate } from 'react-simple-animate';
 
 import { useVisible } from '../hooks/useVisible';
+import { DEFAULT_OBSERVER_OPTIONS } from '../constants';
 
 export const Home = () => {
-  const [ref, inView] = useVisible({
-    threshold: 0.8,
-    triggerOnce: true,
-  });
+  const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);
 
   return (
     <div className="page home-page" ref={ref}>

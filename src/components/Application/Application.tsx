@@ -1,10 +1,12 @@
 import { Animate } from 'react-simple-animate';
 
-import { Header } from './Header';
-import { APPLICATIONS, DEFAULT_OBSERVER_OPTIONS } from '../constants';
-import { useVisible } from '../hooks/useVisible';
-import { useMedia } from '../hooks/useMedia';
+import { Header } from '../Header';
+import { APPLICATIONS } from './constants';
+import { useVisible, useMedia } from '../../hooks';
+import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
 import { ApplicationItem } from './ApplicationItem';
+
+import './styles.scss';
 
 export const Application = () => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);

@@ -1,13 +1,15 @@
 import { Animate } from 'react-simple-animate';
 
-import { useVisible } from '../hooks/useVisible';
-import { DEFAULT_OBSERVER_OPTIONS } from '../constants';
+import { useVisible } from '../../hooks';
+import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+
+import './styles.scss';
 
 export const Home = () => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);
 
   return (
-    <div className="page home-page" ref={ref}>
+    <div className="page home-page white-text" ref={ref}>
       <Animate
         play={inView}
         start={{ opacity: 0 }}

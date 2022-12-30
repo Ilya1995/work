@@ -8,7 +8,7 @@ import { Application } from './components/Application';
 import { Technology } from './components/Technology';
 import { Contacts } from './components/Contacts';
 
-import './index.scss';
+import './styles/index.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,9 +1,11 @@
 import { Animate } from 'react-simple-animate';
 import classNames from 'classnames';
 
-import { useVisible, useMedia } from '../hooks';
-import { DEFAULT_OBSERVER_OPTIONS } from '../constants';
-import { Header } from './Header';
+import { useVisible, useMedia } from '../../hooks';
+import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { Header } from '../Header';
+
+import './styles.scss';
 
 export const Technology = () => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);

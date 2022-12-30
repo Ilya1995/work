@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
 
+import './styles.scss';
+
 type PropsType = {
   iconName: string;
   title: string;

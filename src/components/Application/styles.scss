@@ -1,0 +1,68 @@
+@import '../../styles/colors.scss';
+
+.application-page {
+  &__info {
+    font-size: 1.5rem;
+    color: $basic;
+    margin: 3rem 0rem 2rem 0rem;
+
+    @media (max-width: 1440px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+}
+
+.application-item {
+  > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 15rem;
+  }
+
+  &__icon {
+    height: 8rem;
+
+    @media (max-width: 768px) {
+      height: 5rem;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    color: $basic;
+    font-size: 1.25rem;
+    margin: 1rem 0 1.5rem 0;
+
+    @media (max-width: 1440px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+
+    > div {
+      margin-left: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    &-text {
+      color: $basic;
+      font-size: 1.25rem;
+      line-height: 1.3rem;
+
+      @media (max-width: 1440px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

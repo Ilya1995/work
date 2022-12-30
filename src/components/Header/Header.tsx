@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
 
+import './styles.scss';
+
 type PropsType = {
   inView: boolean;
   title: string;
@@ -23,7 +25,7 @@ export const Header: FC<PropsType> = ({
     >
       <div
         className={classNames('header__title', {
-          header__title_white: isTitleWhite,
+          'white-text': isTitleWhite,
         })}
       >
         {title}

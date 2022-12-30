@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Gilroy', 'Roboto', sans-serif, serif;
+  font-size: 16px;
+  overflow: hidden;
+
+  @media (max-width: 1279px), (max-height: 780px) and (min-width: 1280px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 879px), (max-height: 380px) and (min-width: 880px) {
+    font-size: 12px;
+  }
+}
+
+.page {
+  height: 100vh;
+}
+
+.line-horizontal {
+  height: 0.4rem;
+  background-color: $basic;
+  border-radius: 2rem;
+}
+
+.line-vertical {
+  margin: 0;
+  min-width: 0.2rem;
+  background-color: $basic;
+  border-radius: 2rem;
+
+  &_bold {
+    min-width: 0.75rem;
+  }
+
+  &_white {
+    background-color: $white;
+  }
+}
+
+.white-text {
+  color: $white;
+}
+
+.stroke {
+  border: 0.1rem solid $basic;
+  border-radius: 2rem;
+  padding: 0 0.5rem 0.1rem 0.5rem;
+  white-space: nowrap;
+
+  &-sm {
+    margin: 0 -0.3rem;
+  }
+
+  &-mm {
+    margin: 0 -0.6rem;
+  }
+
+  &-lm {
+    margin: 0 -0.8rem;
+  }
+
+  &-white {
+    border-color: $white;
+  }
+
+  @media (max-width: 768px) {
+    white-space: pre-wrap;
+  }
+}
+
+.info-page,
+.application-page,
+.technology-page,
+.contacts-page {
+  background-color: $white;
+  padding: 2.5rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}

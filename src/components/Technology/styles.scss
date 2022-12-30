@@ -1,0 +1,92 @@
+@import '../../styles/colors.scss';
+
+.technology-page {
+  position: relative;
+  overflow: hidden;
+
+  &-block {
+    display: flex;
+  }
+
+  &__content {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    word-break: break-word;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+
+    > div:first-child {
+      width: 50%;
+    }
+
+    > div:last-child {
+      width: 30%;
+
+      @media (max-width: 1080px) {
+        width: 40%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      > div:first-child {
+        width: auto;
+      }
+
+      > div:last-child {
+        margin-top: 2rem;
+        width: auto;
+      }
+    }
+
+    &-text {
+      margin-left: 2rem;
+      font-size: 2rem;
+
+      @media (max-width: 1440px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.cloud-background {
+  height: 85rem;
+  position: absolute;
+  top: -15rem;
+  left: -25rem;
+  z-index: 1;
+
+  @media (max-width: 2500px) {
+    height: 85rem;
+    top: -15rem;
+    left: -47rem;
+  }
+
+  @media (max-width: 1920px) {
+    height: 75rem;
+    top: -7rem;
+    left: -29rem;
+  }
+
+  @media (max-width: 1680px) {
+    height: 70rem;
+    top: -7rem;
+    left: -35rem;
+  }
+
+  @media (max-width: 1440px) {
+    height: 70rem;
+    top: -7rem;
+    left: -40rem;
+  }
+}

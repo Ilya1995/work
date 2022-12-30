@@ -1,8 +1,10 @@
 import { Animate } from 'react-simple-animate';
 
-import { useVisible } from '../hooks/useVisible';
-import { DEFAULT_OBSERVER_OPTIONS } from '../constants';
-import { Header } from './Header';
+import { useVisible } from '../../hooks';
+import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { Header } from '../Header';
+
+import './styles.scss';
 
 export const Info = () => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);

@@ -15,7 +15,8 @@ body {
 }
 
 .page {
-  height: 100vh;
+  // height: 100vh;
+  height: 100%;
 }
 
 .line-horizontal {
@@ -41,6 +42,16 @@ body {
 
 .white-text {
   color: $white;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 .stroke {

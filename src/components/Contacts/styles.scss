@@ -3,4 +3,112 @@
 .contacts-page {
   z-index: 2;
   position: relative;
+
+  &-qr {
+    background-color: $white;
+    border-radius: 2rem;
+    height: 35rem;
+    width: 40rem;
+
+    &__img {
+      height: 27rem;
+    }
+
+    &__description {
+      color: $basic;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    height: 90%;
+  }
+
+  &__background {
+    display: flex;
+    background-color: $basic;
+    border: 0.1rem solid $basic;
+    height: 35rem;
+    width: 80rem;
+    border-radius: 2rem;
+  }
+
+  &__links {
+    color: $white;
+    font-size: 3rem;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &-img {
+      height: 8rem;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &-qr {
+      height: 27rem;
+      width: 33rem;
+
+      &__img {
+        height: 21rem;
+      }
+
+      &__description {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__background {
+      height: 27rem;
+      width: 65rem;
+    }
+
+    &__links {
+      font-size: 2.5rem;
+
+      &-img {
+        height: 7rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-qr {
+      width: 25rem;
+      height: 27rem;
+      display: flex;
+      flex-direction: column;
+
+      &__img {
+        height: 21rem;
+      }
+
+      &__description {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__background {
+      width: 25rem;
+      height: 50rem;
+      flex-direction: column;
+
+      > div:last-child {
+        height: 100%;
+      }
+    }
+
+    &__links {
+      font-size: 1.75rem;
+
+      &-img {
+        height: 7rem;
+      }
+    }
+  }
 }

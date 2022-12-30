@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/work/static/css/main.fad307eb.css",
+    "main.js": "/work/static/js/main.4fbe9e93.js",
+    "static/js/132.066f700d.chunk.js": "/work/static/js/132.066f700d.chunk.js",
+    "static/media/Gilroy-Regular.ttf": "/work/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
+    "index.html": "/work/index.html",
+    "main.fad307eb.css.map": "/work/static/css/main.fad307eb.css.map",
+    "main.4fbe9e93.js.map": "/work/static/js/main.4fbe9e93.js.map",
+    "132.066f700d.chunk.js.map": "/work/static/js/132.066f700d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fad307eb.css",
+    "static/js/main.4fbe9e93.js"
+  ]
+}

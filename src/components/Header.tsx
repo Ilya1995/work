@@ -1,12 +1,18 @@
+import classNames from 'classnames';
 import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
 
 type PropsType = {
   inView: boolean;
   title: string;
+  isTitleWhite?: boolean;
 };
 
-export const Header: FC<PropsType> = ({ inView, title }) => (
+export const Header: FC<PropsType> = ({
+  inView,
+  title,
+  isTitleWhite = false,
+}) => (
   <div className="header">
     <Animate
       play={inView}
@@ -15,7 +21,13 @@ export const Header: FC<PropsType> = ({ inView, title }) => (
       duration={1}
       easeType="ease-in"
     >
-      <div className="header__title">{title}</div>
+      <div
+        className={classNames('header__title', {
+          header__title_white: isTitleWhite,
+        })}
+      >
+        {title}
+      </div>
       <img className="header__img" alt="Победа" src="./logoHeader.svg" />
     </Animate>
   </div>

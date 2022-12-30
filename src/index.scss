@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: 'Gilroy', 'Roboto', sans-serif, serif;
   font-size: 16px;
+  overflow: hidden;
 
   @media (max-width: 1279px), (max-height: 780px) and (min-width: 1280px) {
     font-size: 14px;
@@ -18,11 +19,6 @@ body {
   @media (max-width: 879px), (max-height: 380px) and (min-width: 880px) {
     font-size: 12px;
   }
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .page {
@@ -39,6 +35,10 @@ code {
 
   &-logo {
     height: 90vh;
+
+    @media (max-width: 1030px) {
+      height: 60vh;
+    }
 
     @media (max-width: 768px) {
       height: 80vw;
@@ -60,6 +60,11 @@ code {
     justify-content: space-around;
     font-size: calc(0.75rem + 3vh);
 
+    @media (max-width: 1030px) {
+      flex-direction: column-reverse;
+      font-size: calc(0.75rem + 2vw);
+    }
+
     @media (max-width: 768px) {
       flex-direction: column-reverse;
       font-size: calc(0.75rem + 3vw);
@@ -75,25 +80,22 @@ code {
 }
 
 .info-page {
-  background-color: #fff;
-  padding: 2.5rem;
-
-  @media (max-width: 768px) {
-    padding: 2.5rem 1rem;
-  }
-
   &-line {
     display: flex;
     align-items: center;
     padding: 3rem 5rem 5rem 1rem;
 
     @media (max-width: 768px) {
-      padding: 3rem 0rem 3rem 1rem;
+      padding: 3rem 0rem 3rem 0;
     }
   }
 
   &__icon {
-    height: 5.5rem;
+    height: 7rem;
+
+    @media (max-width: 768px) {
+      height: 5.5rem;
+    }
   }
 
   &__description {
@@ -104,9 +106,6 @@ code {
 }
 
 .application-page {
-  background-color: #fff;
-  padding: 2.5rem;
-
   &__info {
     font-size: 1.5rem;
     color: #153e4e;
@@ -125,12 +124,73 @@ code {
 }
 
 .technology-page {
+  position: relative;
+  overflow: hidden;
+
+  &-block {
+    display: flex;
+  }
+
+  &__content {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    word-break: break-word;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+
+    > div:first-child {
+      width: 50%;
+    }
+
+    > div:last-child {
+      width: 30%;
+
+      @media (max-width: 1080px) {
+        width: 40%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      > div:first-child {
+        width: auto;
+      }
+
+      > div:last-child {
+        margin-top: 2rem;
+        width: auto;
+      }
+    }
+
+    &-text {
+      margin-left: 2rem;
+      font-size: 2rem;
+
+      @media (max-width: 1440px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
 }
 
 .contacts-page {
+  z-index: 2;
+  position: relative;
 }
 
 .header {
+  z-index: 2;
+  position: relative;
+
   > div {
     display: flex;
     justify-content: space-between;
@@ -140,11 +200,15 @@ code {
   &__title {
     color: #153e4e;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
+
+    &_white {
+      color: #fff;
+    }
   }
 
   &__img {
-    height: 5rem;
+    height: 6rem;
   }
 
   @media (max-width: 768px) {
@@ -218,27 +282,87 @@ code {
   min-width: 0.2rem;
   background-color: #153e4e;
   border-radius: 2rem;
+
+  &_bold {
+    min-width: 0.75rem;
+  }
+
+  &_white {
+    background-color: #fff;
+  }
+}
+
+.cloud-background {
+  height: 85rem;
+  position: absolute;
+  top: -15rem;
+  left: -25rem;
+  z-index: 1;
+
+  @media (max-width: 2500px) {
+    height: 85rem;
+    top: -15rem;
+    left: -47rem;
+  }
+
+  @media (max-width: 1920px) {
+    height: 75rem;
+    top: -7rem;
+    left: -29rem;
+  }
+
+  @media (max-width: 1680px) {
+    height: 70rem;
+    top: -7rem;
+    left: -35rem;
+  }
+
+  @media (max-width: 1440px) {
+    height: 70rem;
+    top: -7rem;
+    left: -40rem;
+  }
+}
+
+.white-text {
+  color: #fff;
 }
 
 .stroke {
   border: 0.1rem solid #153e4e;
   border-radius: 2rem;
   padding: 0 0.5rem 0.1rem 0.5rem;
+  white-space: nowrap;
 
   &-sm {
     margin: 0 -0.3rem;
   }
 
+  &-mm {
+    margin: 0 -0.6rem;
+  }
+
   &-lm {
     margin: 0 -0.8rem;
   }
+
+  &-white {
+    border-color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    white-space: pre-wrap;
+  }
 }
 
-@media (max-width: 768px) {
-  .info-page,
-  .application-page,
-  .technology-page,
-  .contacts-page {
+.info-page,
+.application-page,
+.technology-page,
+.contacts-page {
+  background-color: #fff;
+  padding: 2.5rem;
+
+  @media (max-width: 768px) {
     padding: 1.5rem;
   }
 }

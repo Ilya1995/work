@@ -15,12 +15,12 @@ export const Application = () => {
 
   return (
     <div className="page application-page" ref={ref}>
-      <Header inView={inView} title="СВЯЗЬ ПОБЕДА" />
+      <Header inView={inView} title="ПРИМЕНЕНИЕ" />
       <Animate
         play={inView}
         start={{ opacity: 0 }}
         end={{ opacity: 1 }}
-        duration={1}
+        duration={2}
         easeType="ease-in"
       >
         <div className="application-page__info">
@@ -36,12 +36,12 @@ export const Application = () => {
         <hr className="line-horizontal" />
       </Animate>
       <div className="application-page__content">
-        {newApplications.map((application) => (
+        {newApplications.map((application, index) => (
           <ApplicationItem
             key={application.iconName}
             {...application}
-            translateX={isMobile ? '-100vw' : application.translateX}
             inView={inView}
+            delay={index + 1}
           />
         ))}
       </div>

@@ -6,27 +6,28 @@ import { Header } from '../Header';
 
 import './styles.scss';
 
-export const Info = () => {
+export const Acquaintance = () => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);
 
   return (
-    <div className="page info-page" ref={ref}>
+    <div className="page acquaintance-page" ref={ref}>
       <Header inView={inView} title="СВЯЗЬ ПОБЕДА" />
       <Animate
         play={inView}
         start={{
           transform: 'translateX(-100vw)',
+          opacity: 0,
         }}
-        end={{ transform: 'translateX(0px)' }}
-        duration={1}
+        end={{ transform: 'translateX(0px)', opacity: 1 }}
+        duration={2}
       >
-        <div className="info-page-line">
+        <div className="acquaintance-page-line">
           <img
-            className="info-page__icon"
+            className="acquaintance-page__icon"
             alt="Победа"
             src="./planetCircle.svg"
           />
-          <div className="info-page__description">
+          <div className="acquaintance-page__description">
             Оператор связи «Контентум-Запад» производит&nbsp;
             <b>
               <span className="stroke stroke-sm">
@@ -39,14 +40,24 @@ export const Info = () => {
             ПОБЕДА».
           </div>
         </div>
-
-        <div className="info-page-line">
+      </Animate>
+      <Animate
+        play={inView}
+        start={{
+          transform: 'translateX(-100vw)',
+          opacity: 0,
+        }}
+        end={{ transform: 'translateX(0px)', opacity: 1 }}
+        duration={2}
+        delay={2}
+      >
+        <div className="acquaintance-page-line">
           <img
-            className="info-page__icon"
+            className="acquaintance-page__icon"
             alt="Победа"
             src="./logoCircle.svg"
           />
-          <div className="info-page__description">
+          <div className="acquaintance-page__description">
             <b>
               <span className="stroke stroke-lm">
                 Технология не имеет аналогов на мировом рынке

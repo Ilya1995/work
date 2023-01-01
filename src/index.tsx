@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import ReactPageScroller from 'react-page-scroller';
 
 import { Home } from './components/Home';
-import { Info } from './components/Info';
+import { Acquaintance } from './components/Acquaintance';
 import { Application } from './components/Application';
+import { Information } from './components/Information';
 import { Technology } from './components/Technology';
 import { Contacts } from './components/Contacts';
 
@@ -18,8 +19,9 @@ root.render(
   <React.StrictMode>
     <ReactPageScroller>
       <Home />
-      <Info />
+      <Acquaintance />
       <Application />
+      <Information />
       <Technology />
       <Contacts />
     </ReactPageScroller>

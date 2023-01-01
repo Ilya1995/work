@@ -1,0 +1,1 @@
+export { Acquaintance } from './Acquaintance';

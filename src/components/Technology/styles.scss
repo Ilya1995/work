@@ -46,7 +46,15 @@
 
     &-text {
       margin-left: 2rem;
-      font-size: 2rem;
+      font-size: 2.5rem;
+
+      @media (max-width: 1920px) {
+        font-size: 2.2rem;
+      }
+
+      @media (max-width: 1680px) {
+        font-size: 2rem;
+      }
 
       @media (max-width: 1440px) {
         font-size: 1.5rem;
@@ -75,7 +83,7 @@
   @media (max-width: 1920px) {
     height: 75rem;
     top: -7rem;
-    left: -29rem;
+    left: -31rem;
   }
 
   @media (max-width: 1680px) {

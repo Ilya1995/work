@@ -13,11 +13,21 @@
   &__title {
     color: $basic;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   &__img {
-    height: 6rem;
+    height: 7rem;
+  }
+
+  @media (max-width: 1440px) {
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__img {
+      height: 6rem;
+    }
   }
 
   @media (max-width: 768px) {

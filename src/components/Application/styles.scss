@@ -1,8 +1,10 @@
 @import '../../styles/colors.scss';
 
 .application-page {
+  overflow: hidden;
+
   &__info {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $basic;
     margin: 3rem 0rem 2rem 0rem;
 
@@ -22,7 +24,11 @@
   > div {
     display: flex;
     flex-direction: column;
-    max-width: 15rem;
+    max-width: 18rem;
+
+    @media (max-width: 1680px) {
+      max-width: 15rem;
+    }
   }
 
   &__icon {
@@ -37,8 +43,12 @@
     font-weight: bold;
     text-align: center;
     color: $basic;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin: 1rem 0 1.5rem 0;
+
+    @media (max-width: 1680px) {
+      font-size: 1.25rem;
+    }
 
     @media (max-width: 1440px) {
       font-size: 1rem;
@@ -57,8 +67,11 @@
 
     &-text {
       color: $basic;
-      font-size: 1.25rem;
-      line-height: 1.3rem;
+      font-size: 1.5rem;
+      // line-height: 1.3rem;
+      @media (max-width: 1680px) {
+        font-size: 1.25rem;
+      }
 
       @media (max-width: 1440px) {
         font-size: 1rem;

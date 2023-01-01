@@ -23,9 +23,10 @@ export const Technology = () => {
           play={inView}
           start={{
             transform: `translateX(${isMobile ? '-100vw' : '-60vw'})`,
+            opacity: 0,
           }}
-          end={{ transform: 'translateX(0px)' }}
-          duration={1}
+          end={{ transform: 'translateX(0px)', opacity: 1 }}
+          duration={2}
         >
           <div
             className={classNames('technology-page-block', {
@@ -93,9 +94,11 @@ export const Technology = () => {
           play={inView}
           start={{
             transform: `translateX(${isMobile ? '100vw' : '40vw'})`,
+            opacity: 0,
           }}
-          end={{ transform: 'translateX(0px)' }}
-          duration={1}
+          end={{ transform: 'translateX(0px)', opacity: 1 }}
+          duration={2}
+          delay={2}
         >
           <div className="technology-page-block">
             <hr className="line-vertical line-vertical_bold" />

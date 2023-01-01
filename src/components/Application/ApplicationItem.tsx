@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
 
+import { DURATION } from './constants';
+
 import './styles.scss';
 
 type PropsType = {
@@ -8,7 +10,8 @@ type PropsType = {
   title: string;
   textList: string[];
   inView: boolean;
-  translateX: string;
+  translateY: string;
+  delay: number;
 };
 
 export const ApplicationItem: FC<PropsType> = ({
@@ -16,16 +19,19 @@ export const ApplicationItem: FC<PropsType> = ({
   title,
   textList,
   inView,
-  translateX,
+  translateY,
+  delay,
 }) => (
   <div className="application-item">
     <Animate
       play={inView}
       start={{
-        transform: `translateX(${translateX})`,
+        transform: `translateY(${translateY})`,
+        opacity: 0,
       }}
-      end={{ transform: 'translateX(0px)' }}
-      duration={1}
+      end={{ transform: 'translateY(0px)', opacity: 1 }}
+      duration={DURATION}
+      delay={delay * DURATION}
     >
       <img
         className="application-item__icon"

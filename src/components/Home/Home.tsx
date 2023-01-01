@@ -1,11 +1,17 @@
+import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
 
 import { useVisible } from '../../hooks';
 import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { Menu } from '../Menu';
 
 import './styles.scss';
 
-export const Home = () => {
+type PropsType = {
+  handleChangePage: (index: number) => void;
+};
+
+export const Home: FC<PropsType> = ({ handleChangePage }) => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);
 
   return (
@@ -17,6 +23,7 @@ export const Home = () => {
         duration={3}
         easeType="ease-in"
       >
+        <Menu handleChangePage={handleChangePage} />
         <div className="home-page__content">
           <div>
             <div className="home-page-title">

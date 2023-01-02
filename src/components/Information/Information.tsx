@@ -14,59 +14,75 @@ export const Information = () => {
       <Header inView={inView} title="ИНОФРМАЦИЯ" />
       <Animate
         play={inView}
-        start={{
-          transform: 'translateX(-50vw)',
-          opacity: 0,
-        }}
-        end={{ transform: 'translateX(0px)', opacity: 1 }}
-        duration={2}
+        start={{ opacity: 0 }}
+        end={{ opacity: 1 }}
+        duration={1.5}
       >
-        <div className="information-page-line">
-          <img
-            className="information-page__icon"
-            alt="Победа"
-            src="./planetCircle.svg"
-          />
-          <div className="information-page__description">Ссылка 1</div>
-        </div>
+        <Animate
+          play={inView}
+          start={{
+            transform: 'translateX(-5rem)',
+          }}
+          end={{ transform: 'translateX(0)' }}
+          duration={1}
+        >
+          <div className="information-page-line">
+            <img
+              className="information-page__icon"
+              alt="Победа"
+              src="./planetCircle.svg"
+            />
+            <div className="information-page__description">Ссылка 1</div>
+          </div>
+        </Animate>
       </Animate>
       <Animate
         play={inView}
-        start={{
-          transform: 'translateX(-50vw)',
-          opacity: 0,
-        }}
-        end={{ transform: 'translateX(0px)', opacity: 1 }}
-        duration={2}
-        delay={2}
+        start={{ opacity: 0 }}
+        end={{ opacity: 1 }}
+        duration={1.5}
+        delay={0.2}
       >
-        <div className="information-page-line">
-          <img
-            className="information-page__icon"
-            alt="Победа"
-            src="./planetCircle.svg"
-          />
-          <div className="information-page__description">Ссылка 2</div>
-        </div>
+        <Animate
+          play={inView}
+          start={{ transform: 'translateX(-5rem)' }}
+          end={{ transform: 'translateX(0)' }}
+          duration={1}
+          delay={0.2}
+        >
+          <div className="information-page-line">
+            <img
+              className="information-page__icon"
+              alt="Победа"
+              src="./planetCircle.svg"
+            />
+            <div className="information-page__description">Ссылка 2</div>
+          </div>
+        </Animate>
       </Animate>
       <Animate
         play={inView}
-        start={{
-          transform: 'translateX(-50vw)',
-          opacity: 0,
-        }}
-        end={{ transform: 'translateX(0px)', opacity: 1 }}
-        duration={2}
-        delay={4}
+        start={{ opacity: 0 }}
+        end={{ opacity: 1 }}
+        duration={1.5}
+        delay={0.4}
       >
-        <div className="information-page-line">
-          <img
-            className="information-page__icon"
-            alt="Победа"
-            src="./planetCircle.svg"
-          />
-          <div className="information-page__description">Ссылка 3</div>
-        </div>
+        <Animate
+          play={inView}
+          start={{ transform: 'translateX(-5rem)' }}
+          end={{ transform: 'translateX(0)' }}
+          duration={1}
+          delay={0.4}
+        >
+          <div className="information-page-line">
+            <img
+              className="information-page__icon"
+              alt="Победа"
+              src="./planetCircle.svg"
+            />
+            <div className="information-page__description">Ссылка 3</div>
+          </div>
+        </Animate>
       </Animate>
     </div>
   );

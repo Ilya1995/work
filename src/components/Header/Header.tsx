@@ -20,8 +20,7 @@ export const Header: FC<PropsType> = ({
       play={inView}
       start={{ opacity: 0 }}
       end={{ opacity: 1 }}
-      duration={2}
-      easeType="ease-in"
+      duration={1}
     >
       <div
         className={classNames('header__title', {

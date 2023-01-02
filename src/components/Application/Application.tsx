@@ -1,17 +1,25 @@
+import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
 
 import { Header } from '../Header';
-import { APPLICATIONS } from './constants';
-import { useVisible, useMedia } from '../../hooks';
+import { APPLICATIONS, SIZE_APPLICATIONS_FOR_MOBILE } from './constants';
+import { useVisible } from '../../hooks';
 import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
 import { ApplicationItem } from './ApplicationItem';
 
 import './styles.scss';
 
-export const Application = () => {
+type PropsType = {
+  isMobile?: boolean;
+  page?: number;
+};
+
+export const Application: FC<PropsType> = ({ isMobile, page = 1 }) => {
   const [ref, inView] = useVisible(DEFAULT_OBSERVER_OPTIONS);
-  const isMobile = useMedia('(max-width: 768px)');
-  const newApplications = isMobile ? APPLICATIONS.slice(0, 3) : APPLICATIONS;
+  const indexCopy = (page - 1) * SIZE_APPLICATIONS_FOR_MOBILE;
+  const newApplications = isMobile
+    ? APPLICATIONS.slice(indexCopy, indexCopy + SIZE_APPLICATIONS_FOR_MOBILE)
+    : APPLICATIONS;
 
   return (
     <div className="page application-page" ref={ref}>
@@ -20,14 +28,13 @@ export const Application = () => {
         play={inView}
         start={{ opacity: 0 }}
         end={{ opacity: 1 }}
-        duration={2}
-        easeType="ease-in"
+        duration={1}
       >
         <div className="application-page__info">
           «СВЯЗЬ ПОБЕДА» предлагает&nbsp;
           <b>
             <span className="stroke">скоростную и рентабельную связь</span>
-            для труднодоступных объектов
+            &nbsp;для труднодоступных объектов
           </b>
           &nbsp;с подключением от одного рабочего дня. В отличии от любого
           другого оператора связи или существующей технологии связи, мы
@@ -41,7 +48,7 @@ export const Application = () => {
             key={application.iconName}
             {...application}
             inView={inView}
-            delay={index + 1}
+            delay={index * 0.2}
           />
         ))}
       </div>

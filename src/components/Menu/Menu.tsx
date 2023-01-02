@@ -1,7 +1,7 @@
 import { FC, useState, useRef } from 'react';
 import classNames from 'classnames';
 
-import { useOnClickOutside } from '../../hooks';
+import { useMedia, useOnClickOutside } from '../../hooks';
 
 import './styles.scss';
 
@@ -12,6 +12,7 @@ type PropsType = {
 export const Menu: FC<PropsType> = ({ handleChangePage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const node = useRef<HTMLDivElement>(null);
+  const isMobile = useMedia('(max-width: 768px)');
 
   useOnClickOutside(node, () => {
     if (isOpen) {
@@ -28,7 +29,6 @@ export const Menu: FC<PropsType> = ({ handleChangePage }) => {
       <button
         className={classNames('menu__button', {
           menu__button_active: isOpen,
-          'menu__button_not-active': !isOpen,
         })}
         onClick={onChangeIsMenuOpen}
       >
@@ -41,10 +41,30 @@ export const Menu: FC<PropsType> = ({ handleChangePage }) => {
           menu__side_open: isOpen,
         })}
       >
-        <div className="menu__side-link" onClick={() => handleChangePage(2)}>
-          Главная
+        <div className="menu__side-link" onClick={() => handleChangePage(1)}>
+          О нас
         </div>
-        <div className="menu__side-link">Статьи</div>
+        <div className="menu__side-link" onClick={() => handleChangePage(2)}>
+          Применение
+        </div>
+        <div
+          className="menu__side-link"
+          onClick={() => handleChangePage(isMobile ? 4 : 3)}
+        >
+          Информация
+        </div>
+        <div
+          className="menu__side-link"
+          onClick={() => handleChangePage(isMobile ? 5 : 4)}
+        >
+          Технология
+        </div>
+        <div
+          className="menu__side-link"
+          onClick={() => handleChangePage(isMobile ? 6 : 5)}
+        >
+          Контакты
+        </div>
       </div>
     </div>
   );

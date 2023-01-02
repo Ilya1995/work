@@ -7,7 +7,6 @@ export const APPLICATIONS = [
       'Дорожные камеры контроля скорости',
       'Любые системы видеонаблюдения на труднодоступных объектах или объектах с дорогой последней милей (Мосты, камеры контроля скорости и т.д.)',
     ],
-    translateY: '-100vh',
   },
   {
     iconName: 'shipCircleFront',
@@ -16,7 +15,6 @@ export const APPLICATIONS = [
       'Речной транспорт: Сухогрузы, круизные корабли',
       'Морской транспорт: Сухогрузы, танкеры, круизные корабли',
     ],
-    translateY: '-100vh',
   },
   {
     iconName: 'busCircle',
@@ -27,7 +25,6 @@ export const APPLICATIONS = [
       'Любые дорожные пункты контроля',
       'Спецтранспорт и мобильные объекты особого назначения',
     ],
-    translateY: '-100vh',
   },
   {
     iconName: 'pathCircle',
@@ -38,13 +35,11 @@ export const APPLICATIONS = [
       'Рентабельная высококачественная связь через спутник для сотовых базовых станций в труднодоступных районах',
       'SLA каналов до 99,99%',
     ],
-    translateY: '-100vh',
   },
   {
     iconName: 'houseCircle',
     title: 'УДАЛЕННЫЕ ОБЪЕКТЫ',
     textList: ['Точки продаж', 'АЗС', 'Кафе', 'Офисы', 'Частные домовладения'],
-    translateY: '-100vh',
   },
   {
     iconName: 'oilCircle',
@@ -55,8 +50,8 @@ export const APPLICATIONS = [
       'Мобильные бригады',
       'Узлы связи для IoT',
     ],
-    translateY: '-100vh',
   },
 ];
 
-export const DURATION = 2;
+export const DURATION = 1;
+export const SIZE_APPLICATIONS_FOR_MOBILE = 3;

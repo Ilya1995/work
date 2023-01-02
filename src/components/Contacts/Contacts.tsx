@@ -18,7 +18,7 @@ export const Contacts = () => {
           play={inView}
           start={{ opacity: 0 }}
           end={{ opacity: 1 }}
-          duration={2}
+          duration={1.5}
         >
           <div className="contacts-page__background">
             <div className="contacts-page-qr">

@@ -111,9 +111,9 @@ export const Technology = () => {
               <hr className="line-vertical line-vertical_bold" />
               <div className="technology-page__content-text">
                 <b>
-                  В состав продукта входит&nbsp;
-                  <span className="stroke">абонентское оборудование</span>
-                  &nbsp;и облачные сервисы,
+                  В состав продукта входят&nbsp;
+                  <span className="stroke">абонентское оборудование</span> и
+                  облачные сервисы,
                 </b>
                 &nbsp;которые позволяют объединять несколько слабых традиционных
                 каналов передачи данных в один высокоскоростной и чрезвычайно

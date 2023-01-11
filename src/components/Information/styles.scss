@@ -17,9 +17,9 @@
     color: $basic;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1680px) {
     &-line {
-      margin: 5rem 0rem 3rem 0;
+      margin: 3rem 0rem 3rem 0;
     }
 
     &__icon {
@@ -32,10 +32,6 @@
   }
 
   @media (max-width: 768px) {
-    &-line {
-      margin: 3rem 0rem 3rem 0;
-    }
-
     &__icon {
       height: 5.5rem;
     }

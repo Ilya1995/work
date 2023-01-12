@@ -4,7 +4,7 @@ import { Animate } from 'react-simple-animate';
 import { Header } from '../Header';
 import { APPLICATIONS, SIZE_APPLICATIONS_FOR_MOBILE } from './constants';
 import { useVisible } from '../../hooks';
-import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { AnchorPageEnum, DEFAULT_OBSERVER_OPTIONS } from '../../constants';
 import { ApplicationItem } from './ApplicationItem';
 
 import './styles.scss';
@@ -23,7 +23,11 @@ export const Application: FC<PropsType> = ({ isMobile, page = 1 }) => {
 
   return (
     <div className="page application-page" ref={ref}>
-      <Header inView={inView} title="ПРИМЕНЕНИЕ" />
+      <Header
+        inView={inView}
+        title="ПРИМЕНЕНИЕ"
+        href={AnchorPageEnum.APPLICATION}
+      />
       <Animate
         play={inView}
         start={{ opacity: 0 }}

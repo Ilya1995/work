@@ -1,7 +1,7 @@
 import { Animate } from 'react-simple-animate';
 
 import { useVisible } from '../../hooks';
-import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { AnchorPageEnum, DEFAULT_OBSERVER_OPTIONS } from '../../constants';
 import { Header } from '../Header';
 
 import './styles.scss';
@@ -11,7 +11,11 @@ export const Information = () => {
 
   return (
     <div className="page information-page" ref={ref}>
-      <Header inView={inView} title="ИНОФРМАЦИЯ" />
+      <Header
+        inView={inView}
+        title="ИНОФРМАЦИЯ"
+        href={AnchorPageEnum.INFORMATION}
+      />
       <Animate
         play={inView}
         start={{ opacity: 0 }}

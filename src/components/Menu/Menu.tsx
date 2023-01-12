@@ -1,18 +1,20 @@
 import { FC, useState, useRef } from 'react';
 import classNames from 'classnames';
 
-import { useMedia, useOnClickOutside } from '../../hooks';
+import { useOnClickOutside } from '../../hooks';
+import { AnchorMapToPageType } from '../../types';
 
 import './styles.scss';
+import { AnchorPageEnum } from '../../constants';
 
 type PropsType = {
   handleChangePage: (index: number) => void;
+  anchorMapToPage: AnchorMapToPageType;
 };
 
-export const Menu: FC<PropsType> = ({ handleChangePage }) => {
+export const Menu: FC<PropsType> = ({ handleChangePage, anchorMapToPage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const node = useRef<HTMLDivElement>(null);
-  const isMobile = useMedia('(max-width: 768px)');
 
   useOnClickOutside(node, () => {
     if (isOpen) {
@@ -22,6 +24,11 @@ export const Menu: FC<PropsType> = ({ handleChangePage }) => {
 
   const onChangeIsMenuOpen = () => {
     setIsOpen((prev) => !prev);
+  };
+
+  const onChangeHash = (href: AnchorPageEnum) => {
+    window.location.href = '#' + href;
+    handleChangePage(anchorMapToPage[href]);
   };
 
   return (
@@ -41,27 +48,33 @@ export const Menu: FC<PropsType> = ({ handleChangePage }) => {
           menu__side_open: isOpen,
         })}
       >
-        <div className="menu__side-link" onClick={() => handleChangePage(1)}>
+        <div
+          className="menu__side-link"
+          onClick={() => onChangeHash(AnchorPageEnum.ACQUAINTANCE)}
+        >
           О нас
         </div>
-        <div className="menu__side-link" onClick={() => handleChangePage(2)}>
+        <div
+          className="menu__side-link"
+          onClick={() => onChangeHash(AnchorPageEnum.APPLICATION)}
+        >
           Применение
         </div>
         <div
           className="menu__side-link"
-          onClick={() => handleChangePage(isMobile ? 4 : 3)}
-        >
-          Информация
-        </div>
-        <div
-          className="menu__side-link"
-          onClick={() => handleChangePage(isMobile ? 5 : 4)}
+          onClick={() => onChangeHash(AnchorPageEnum.TECHNOLOGY)}
         >
           Технология
         </div>
+        {/* <div
+          className="menu__side-link"
+          onClick={() => onChangeHash(AnchorPageEnum.INFORMATION)}
+        >
+          Информация
+        </div> */}
         <div
           className="menu__side-link"
-          onClick={() => handleChangePage(isMobile ? 6 : 5)}
+          onClick={() => onChangeHash(AnchorPageEnum.CONTACTS)}
         >
           Контакты
         </div>

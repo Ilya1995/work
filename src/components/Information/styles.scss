@@ -1,6 +1,9 @@
 @import '../../styles/colors.scss';
 
 .information-page {
+  z-index: 2;
+  position: relative;
+
   &-line {
     display: flex;
     align-items: center;

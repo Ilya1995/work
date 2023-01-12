@@ -1,7 +1,7 @@
 import { Animate } from 'react-simple-animate';
 
 import { useVisible } from '../../hooks';
-import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { AnchorPageEnum, DEFAULT_OBSERVER_OPTIONS } from '../../constants';
 import { Header } from '../Header';
 
 import './styles.scss';
@@ -11,7 +11,7 @@ export const Contacts = () => {
 
   return (
     <div className="page contacts-page" ref={ref}>
-      <Header inView={inView} title="КОНТАКТЫ" />
+      <Header inView={inView} title="КОНТАКТЫ" href={AnchorPageEnum.CONTACTS} />
 
       <div className="contacts-page__content flex-center">
         <Animate

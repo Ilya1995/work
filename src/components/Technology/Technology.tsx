@@ -2,7 +2,7 @@ import { Animate } from 'react-simple-animate';
 import classNames from 'classnames';
 
 import { useVisible, useMedia } from '../../hooks';
-import { DEFAULT_OBSERVER_OPTIONS } from '../../constants';
+import { AnchorPageEnum, DEFAULT_OBSERVER_OPTIONS } from '../../constants';
 import { Header } from '../Header';
 
 import './styles.scss';
@@ -13,7 +13,12 @@ export const Technology = () => {
 
   return (
     <div className="page technology-page" ref={ref}>
-      <Header inView={inView} title="ТЕХНОЛОГИЯ" isTitleWhite={!isMobile} />
+      <Header
+        inView={inView}
+        title="ТЕХНОЛОГИЯ"
+        isTitleWhite={!isMobile}
+        href={AnchorPageEnum.TECHNOLOGY}
+      />
       {!isMobile && (
         <img className="cloud-background" alt="Победа" src="./smallCloud.svg" />
       )}

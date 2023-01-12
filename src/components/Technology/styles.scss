@@ -68,11 +68,17 @@
 }
 
 .cloud-background {
-  height: 85rem;
+  height: 98rem;
   position: absolute;
-  top: -15rem;
-  left: -25rem;
+  top: -18rem;
+  left: -30rem;
   z-index: 1;
+
+  @media (max-width: 2560px) {
+    height: 85rem;
+    top: -15rem;
+    left: -25rem;
+  }
 
   @media (max-width: 2500px) {
     height: 85rem;

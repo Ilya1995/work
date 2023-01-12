@@ -8,28 +8,39 @@ type PropsType = {
   inView: boolean;
   title: string;
   isTitleWhite?: boolean;
+  href?: string;
 };
 
 export const Header: FC<PropsType> = ({
   inView,
   title,
   isTitleWhite = false,
-}) => (
-  <div className="header">
-    <Animate
-      play={inView}
-      start={{ opacity: 0 }}
-      end={{ opacity: 1 }}
-      duration={1}
-    >
-      <div
-        className={classNames('header__title', {
-          'white-text': isTitleWhite,
-        })}
+  href,
+}) => {
+  const onClickOnTitle = () => {
+    if (href) {
+      window.location.href = '#' + href;
+    }
+  };
+
+  return (
+    <div className="header">
+      <Animate
+        play={inView}
+        start={{ opacity: 0 }}
+        end={{ opacity: 1 }}
+        duration={1}
       >
-        {title}
-      </div>
-      <img className="header__img" alt="Победа" src="./logoHeader.svg" />
-    </Animate>
-  </div>
-);
+        <div
+          className={classNames('header__title', {
+            'white-text': isTitleWhite,
+          })}
+          onClick={onClickOnTitle}
+        >
+          {title}
+        </div>
+        <img className="header__img" alt="Победа" src="./logoHeader.svg" />
+      </Animate>
+    </div>
+  );
+};

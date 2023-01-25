@@ -48,7 +48,7 @@ export const Home: FC<PropsType> = ({ handleChangePage, anchorMapToPage }) => {
               ОБЪЕКТОВ
             </div>
           </div>
-          <img className="home-page-logo" alt="Победа" src="./logo.svg" />
+          <img className="home-page-logo" alt="Телеком" src="./logo.svg" />
         </div>
         <div className="home-page-note">{/* Москва 2023 */}</div>
       </Animate>

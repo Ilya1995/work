@@ -2,6 +2,7 @@ export const APPLICATIONS = [
   {
     iconName: 'cameraCircle',
     title: 'ВИДЕОНАБЛЮДЕНИЕ',
+    underlining: [],
     textList: [
       'Городское видеонаблюдение «Безопасный Город»',
       'Дорожные камеры контроля скорости',
@@ -11,6 +12,7 @@ export const APPLICATIONS = [
   {
     iconName: 'shipCircleFront',
     title: 'СУДОХОДСТВО',
+    underlining: [],
     textList: [
       'Речной транспорт: Сухогрузы, круизные корабли',
       'Морской транспорт: Сухогрузы, танкеры, круизные корабли',
@@ -19,6 +21,7 @@ export const APPLICATIONS = [
   {
     iconName: 'busCircle',
     title: 'ТРАНСПОРТ',
+    underlining: [],
     textList: [
       'Общественный транспорт',
       'ГИБДД, МЧС, МВД',
@@ -29,8 +32,9 @@ export const APPLICATIONS = [
   {
     iconName: 'pathCircle',
     title: 'ОПЕРАТОРЫ СВЯЗИ',
+    underlining: [0],
     textList: [
-      'Последняя миля до абонента L3/L2, BGP',
+      'Двунаправленные L3/L2 туннели без потери скорости\u00A0*',
       'Территориально распределенное терминирование',
       'Рентабельная высококачественная связь через спутник для сотовых базовых станций в труднодоступных районах',
       'SLA каналов до 99,99%',
@@ -39,11 +43,13 @@ export const APPLICATIONS = [
   {
     iconName: 'houseCircle',
     title: 'УДАЛЕННЫЕ ОБЪЕКТЫ',
+    underlining: [],
     textList: ['Точки продаж', 'АЗС', 'Кафе', 'Офисы', 'Частные домовладения'],
   },
   {
     iconName: 'oilCircle',
     title: 'ПРОМЫШЛЕННОСТЬ',
+    underlining: [],
     textList: [
       'Карьеры',
       'Буровые станции',

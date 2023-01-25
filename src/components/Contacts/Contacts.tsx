@@ -24,25 +24,30 @@ export const Contacts = () => {
             <div className="contacts-page-qr">
               <img
                 className="contacts-page-qr__img"
-                alt="Победа"
+                alt="Телеком"
                 src="./QR.svg"
               />
-              <p className="contacts-page-qr__description">pobeda.link</p>
+              <p className="contacts-page-qr__description">ktel.link</p>
             </div>
             <div className="flex-center w-100">
               <div className="contacts-page__links">
-                <div className="contacts-page__links-item">
+                <a
+                  className="contacts-page__links-item"
+                  href="https://ktel.link"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <img
                     className="contacts-page__links-img"
-                    alt="Победа"
+                    alt="Телеком"
                     src="./internet.svg"
                   />
-                  pobeda.link
-                </div>
+                  ktel.link
+                </a>
                 <div className="contacts-page__links-item">
                   <img
                     className="contacts-page__links-img"
-                    alt="Победа"
+                    alt="Телеком"
                     src="./mail.svg"
                   />
                   info@pobeda.link

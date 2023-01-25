@@ -33,7 +33,7 @@ export const Information = () => {
           <div className="information-page-line">
             <img
               className="information-page__icon"
-              alt="Победа"
+              alt="Телеком"
               src="./planetCircle.svg"
             />
             <div className="information-page__description">Ссылка 1</div>
@@ -57,7 +57,7 @@ export const Information = () => {
           <div className="information-page-line">
             <img
               className="information-page__icon"
-              alt="Победа"
+              alt="Телеком"
               src="./planetCircle.svg"
             />
             <div className="information-page__description">Ссылка 2</div>
@@ -81,7 +81,7 @@ export const Information = () => {
           <div className="information-page-line">
             <img
               className="information-page__icon"
-              alt="Победа"
+              alt="Телеком"
               src="./planetCircle.svg"
             />
             <div className="information-page__description">Ссылка 3</div>

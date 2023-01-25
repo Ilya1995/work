@@ -74,9 +74,20 @@
       gap: 0.6rem;
     }
 
+    p {
+      margin: 0;
+    }
+
     &-text {
       color: $basic;
       font-size: 1.5rem;
+
+      &_under {
+        background-image: linear-gradient(to right, $basic 0%, $basic 100%);
+        background-repeat: repeat-x;
+        background-position: 0 100%;
+        background-size: 100% 1px;
+      }
 
       @media (max-width: 1680px) {
         font-size: 1.25rem;

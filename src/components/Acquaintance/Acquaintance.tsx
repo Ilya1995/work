@@ -13,7 +13,7 @@ export const Acquaintance = () => {
     <div className="page acquaintance-page" ref={ref}>
       <Header
         inView={inView}
-        title="СВЯЗЬ ПОБЕДА"
+        title="Контентум-Телеком"
         href={AnchorPageEnum.ACQUAINTANCE}
       />
       <Animate
@@ -31,7 +31,7 @@ export const Acquaintance = () => {
           <div className="acquaintance-page-line">
             <img
               className="acquaintance-page__icon"
-              alt="Победа"
+              alt="Телеком"
               src="./planetCircle.svg"
             />
             <div className="acquaintance-page__description">
@@ -43,8 +43,8 @@ export const Acquaintance = () => {
                 &nbsp; и программное обеспечение
               </b>
               &nbsp;для организации высокоскоростной резервируемой связи на
-              труднодоступных объектах в любой точке планеты под брендом «СВЯЗЬ
-              ПОБЕДА».
+              труднодоступных объектах в любой точке планеты под брендом
+              «Контентум-Телеком».
             </div>
           </div>
         </Animate>
@@ -66,7 +66,7 @@ export const Acquaintance = () => {
           <div className="acquaintance-page-line">
             <img
               className="acquaintance-page__icon"
-              alt="Победа"
+              alt="Телеком"
               src="./logoCircle.svg"
             />
             <div className="acquaintance-page__description">

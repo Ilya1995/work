@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Animate } from 'react-simple-animate';
+import classNames from 'classnames';
 
 import { DURATION } from './constants';
 
@@ -9,6 +10,7 @@ type PropsType = {
   iconName: string;
   title: string;
   textList: string[];
+  underlining: number[];
   inView: boolean;
   delay: number;
 };
@@ -17,6 +19,7 @@ export const ApplicationItem: FC<PropsType> = ({
   iconName,
   title,
   textList,
+  underlining,
   inView,
   delay,
 }) => (
@@ -39,7 +42,7 @@ export const ApplicationItem: FC<PropsType> = ({
       >
         <img
           className="application-item__icon"
-          alt="Победа"
+          alt="Телеком"
           src={`./${iconName}.svg`}
         />
         <div className="application-item__title">{title}</div>
@@ -47,9 +50,16 @@ export const ApplicationItem: FC<PropsType> = ({
           <hr className="line-vertical" />
           <div>
             {textList.map((text, index) => (
-              <div key={index} className="application-item__description-text">
-                {text}
-              </div>
+              <p key={index}>
+                <span
+                  className={classNames('application-item__description-text', {
+                    'application-item__description-text_under':
+                      underlining.includes(index),
+                  })}
+                >
+                  {text}
+                </span>
+              </p>
             ))}
           </div>
         </div>

@@ -2,22 +2,25 @@
 
 .home-page {
   background-color: $basic;
+  background-image: url('../../../public/map.png');
+  opacity: 0.8;
+  background-size: cover;
 
   &-title {
     font-weight: bold;
   }
 
   &-logo {
-    height: 32rem;
+    height: 26rem;
 
     @media (max-width: 1030px) {
-      height: 22rem;
+      height: 20rem;
       margin-bottom: 5rem;
     }
 
     @media (max-width: 768px) {
-      height: 20rem;
-      margin-bottom: 2rem;
+      height: 14rem;
+      margin-bottom: 4rem;
     }
   }
 

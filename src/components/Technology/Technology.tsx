@@ -20,7 +20,11 @@ export const Technology = () => {
         href={AnchorPageEnum.TECHNOLOGY}
       />
       {!isMobile && (
-        <img className="cloud-background" alt="Победа" src="./smallCloud.svg" />
+        <img
+          className="cloud-background"
+          alt="Телеком"
+          src="./smallCloud.svg"
+        />
       )}
 
       <div className="technology-page__content">

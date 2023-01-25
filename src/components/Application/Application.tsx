@@ -35,7 +35,7 @@ export const Application: FC<PropsType> = ({ isMobile, page = 1 }) => {
         duration={1}
       >
         <div className="application-page__info">
-          «СВЯЗЬ ПОБЕДА» предлагает&nbsp;
+          «Контентум-Телеком» предлагает&nbsp;
           <b>
             <span className="stroke">скоростную и рентабельную связь</span>
             &nbsp;для труднодоступных объектов

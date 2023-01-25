@@ -39,7 +39,7 @@ export const Header: FC<PropsType> = ({
         >
           {title}
         </div>
-        <img className="header__img" alt="Победа" src="./logoHeader.svg" />
+        <img className="header__img" alt="Телеком" src="./logoHeader.svg" />
       </Animate>
     </div>
   );
